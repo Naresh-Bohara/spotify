@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify - Web Player: Music for everyone </title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./utility.css" />
+</head>
+
+<body>
+  <!-- <img src="logo.svg" alt=""> -->
+
+  <div class="container flex bg-black">
+    <div class="left">
+      <div class="close">
+        <img class="invert" width="29" src="./close.svg" alt="">
+      </div>
+      <div class="home bg-grey b-rounded m-1 p-1">
+        <div class="logo">
+          <img width="110" class="invert" src="logo.svg" alt="logo" />
+        </div>
+        <ul>
+          <li><img class="invert" src="home.svg" alt="home" />Home</li>
+          <li><img class="invert" src="search.svg" alt="search" />Search</li>
+        </ul>
+      </div>
+      <div class="library bg-grey b-rounded m-1 p-1">
+        <div class="heading">
+          <img src="playlist.svg" class="invert" alt="playlist" />
+          <h2>Your library</h2>
+        </div>
+
+        <div class="songList">
+          <ul>
+          </ul>
+        </div>
+
+        <div class="footer">
+          <div>
+            <a href="https://www.spotify.com/in-en/legal/">
+              <span>Legal</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/in-en/privacy/">
+              <span>Privacy Center</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/in-en/legal/privacy-policy/">
+              <span>Privacy Policy</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/in-en/legal/cookies-policy/">
+              <span>Cookies</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+              <span>About Ads</span>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.spotify.com/in-en/accessibility/">
+              <span>Accessibility</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right bg-grey b-rounded">
+      <div class="header">
+        <div class="nav">
+          <div class="hamburgerContainer">
+            <img class="invert hamburger" height="42" src="./hamburger.svg" alt="">
+          <svg class="invert" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z" />
+          </svg>
+
+          <svg class="invert" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+          </svg>
+        </div>
+      </div>
+        <div class="buttons">
+          <button class="signup-btn">Sign up</button>
+          <button class="login-btn">Log in</button>
+        </div>
+      </div>
+      <div class="spotifyPlaylists">
+        <h1>Spotift Playlists</h1>
+        <div class="cardContainer">
+
+          <div data-folder="nep" class="card">
+            <div>
+              <svg class="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="60" height="40">
+                <circle cx="15" cy="15" r="13" fill="#1ed760" />
+                <path d="M12,9 L20,15 L12,21 L12,9 Z" fill="#000000"></path>
+              </svg>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3_Q0hvMrsjT84WKMkbFlcHqLWvng-5wAw0e00AqAoPby0qPHTwOXcTguahEa0CVzzYR0&usqp=CAU" alt="">
+            <h2>Top Nepali Songs</h2>
+            <p>Here are Nepali songs - Enjoy</p>
+          </div>
+
+           <div data-folder="hindi" class="card">
+            <div>
+              <svg class="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="60" height="40">
+                <circle cx="15" cy="15" r="13" fill="#1ed760" />
+                <path d="M12,9 L20,15 L12,21 L12,9 Z" fill="#000000"></path>
+              </svg>
+            </div>
+            <img src="data:image/jpeg;base64,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" alt="">
+            <h2>Best Hindi Songs</h2>
+            <p>Here are Hindi songs - Enjoy</p>
+          </div>    
+          
+          <div data-folder="eng" class="card">
+            <div>
+              <svg class="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="60" height="40">
+                <circle cx="15" cy="15" r="13" fill="#1ed760" />
+                <path d="M12,9 L20,15 L12,21 L12,9 Z" fill="#000000"></path>
+              </svg>
+            </div>
+            <img src="https://yt3.googleusercontent.com/HzRAe6c8JbXuglTRScXmNB_jYDAYmbzAW0am2e4AydMxvWg7EpAmhatUCzutbyM8ifwHs2vn=s900-c-k-c0x00ffffff-no-rj" alt="">
+            <h2>Best English Songs</h2>
+            <p>Here are English songs - Enjoy</p>
+          </div>          
+
+
+        </div>
+        <div class="playbar">
+          <div class="seekbar">
+            <div class="circle">
+              
+            </div>
+          </div>
+          <div class="abovebar">
+
+          <div class="songinfo">
+          
+          </div>
+          <div class="songs-btns">
+            <img width="30" id="previous" src="prevsong.svg" alt="">
+            <img width="30" id="play" src="play.svg" alt="">
+            <img width="30" id="next" src="nextsong.svg" alt="">
+          </div>
+          <div class="timevol">
+          <div class="songtime">
+          </div>
+          <div class="volume">
+            <img width="30" src="./volume.svg" alt="">
+            <div class="range">
+              <input type="range" name="volume" id="">
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
